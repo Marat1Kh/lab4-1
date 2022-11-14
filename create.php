@@ -11,9 +11,7 @@ if(isset($_POST['submitSave'])) {
             $product->addChild('price', $_POST['price']);
             $product->addChild('description', $_POST['description']);
             file_put_contents('product.xml', $products->asXML());
-            header('location:index.php');
-
-
+            header('location:list.php');
 }
 ?>
 <form method="post">

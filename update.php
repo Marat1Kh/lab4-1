@@ -7,13 +7,13 @@ if(isset($_POST['submitSave'])) {
         if($product['id']==$_POST['id']){
             $product->name = $_POST['name'];
             $product->price = $_POST['price'];
+            $product->description = $_POST['description'];
             break;
         }
     }
     file_put_contents('product.xml', $products->asXML());
-    header('location:index.php');
+    header('location:list.php');
 }
-
 foreach($products->product as $product){
     if($product['id']==$_GET['id']){
         $id = $product['id'];

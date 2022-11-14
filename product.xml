@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <products>
-    <product id="1">
-        <name>Product 1</name>
-        <price>100</price>
-        <description>Product 1 description</description>
-    </product>
-<product id="2"><name>das</name><price>ads23123</price><description>123123123</description></product><product id="3"><name>qewqewqrew</name><price>46465456</price><description>ghjghjkghj</description>
-</product>
+    
+<product id="2"><name>das</name><price>ads231232211</price><description>12312312312311a</description></product>
 </products>
