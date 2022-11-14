@@ -3,15 +3,16 @@ if(isset($_POST['submitSave'])) {
     $products = simplexml_load_file('product.xml');
     $product = $products->addChild('product');
     $z = 0;
-    foreach ($products as $product) {
-        $z++;
-        $product->addAttribute('id', $z);
-    }
+    foreach ($products as $product){
+                $z++;
+                $product->addAttribute('id', $z);
+            }
             $product->addChild('name', $_POST['name']);
             $product->addChild('price', $_POST['price']);
             $product->addChild('description', $_POST['description']);
             file_put_contents('product.xml', $products->asXML());
             header('location:list.php');
+
 }
 ?>
 <form method="post">
@@ -25,7 +26,7 @@ if(isset($_POST['submitSave'])) {
         </tr>
         <tr>
             <td>Price ($):</td>
-            <td><input type="text" name="price"></td>
+            <td><input type="number" name="price"></td>
         </tr>
         <tr>
             <td>Description:</td>
