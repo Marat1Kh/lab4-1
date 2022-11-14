@@ -19,15 +19,12 @@ $products = simplexml_load_file('product.xml');
         <td><?php echo $product->price; ?></td>
         <td><?php echo $product->description;?></td>
         <td><a href="update.php?id=<?php echo $product['id']; ?>">Update</a><br>
-            <form method="post">
-                <a href="delete.php?action=delete&id=<?php echo $product['id']; ?>" onclick="return confirm('Are you sure?')">Delete</a>
-            </form>
     </tr>
         <a href="list.php?id=<?php echo $product['
 id']; ?>">List</a><br>
 
         <form action="delete.php" method="post" name="delete">
-            <a href="delete.php?action=delete&id=<?php echo $product['id']; ?>" >Delete</a>
+            <a href="delete.php?action=delete&id=<?php echo $product['id']; ?>"onclick="return confirm('Are you sure?')">Delete</a>
         </form>
 
     <?php }
